@@ -19,7 +19,7 @@ ACCOUNT_NAME = "Security Team 2"
 ISSUER = "Security Team 2"
 
 
-def generate_base32_secret(length_bytes: int = 32) -> str:
+def generate_base32_secret(length_bytes: int = 20) -> str:
     random_bytes = secrets.token_bytes(length_bytes)
     b32 = base64.b32encode(random_bytes).decode('utf-8')
     return b32.rstrip('=')
